@@ -157,6 +157,9 @@ Route::middleware(['guest'])->group(function () {
 
 use App\Http\Controllers\TestController;
 
+Route::get("emailOrderComplete", function (){
+    return view("emails.emailOrderComplete");
+});
 Route::get("test", [TestController::class, 'index']);
 Route::post("test", [TestController::class, 'post']);
 
